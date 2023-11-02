@@ -1,0 +1,162 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .2s linear;
+}
+html{
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+	overflow-x: hidden;
+}
+section{
+	padding: 2rem 9%;
+}
+.button{
+	display: inline-block;
+	margin-top: 1rem;
+	border-radius: 5rem;
+	background: #333;
+	color: #fff;
+	padding: .9rem 3.5rem;
+	cursor: pointer;
+}
+.button:hover{
+	background-color: var(--blue);
+}
+
+header{
+	top: 0; left: 0; right: 0;
+	padding: 2rem 9%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 1000;
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+header .logo{
+	font-size: var(--font-size-medium);
+	color: #ffffff;
+	font-weight: bold;
+}
+header .logo span{
+	color: var(--blue);
+}
+header .navbar a{
+	font-size: var(--font-size-small);
+	padding: 0 1.5rem;
+	color: var(--navbar-text-color);
+}
+header .navbar a:hover{
+	color: var(--blue);
+}
+
+header .icons a{
+	font-size: var(--font-size-small);
+	color: var(--navbar-text-color);
+	margin-left: 0.5rem;
+}
+header .icons a:hover{
+	color: var(--blue);
+}
+header #toggler{
+	display: none;
+}
+
+header .fa-bars{
+	font-size: var(--font-size-small);
+	color: #ffffff;
+	border-radius: .5rem;
+	padding: .5rem 1.5rem;
+	cursor: pointer;
+	display: none;
+}
+
+
+.home{
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	background: url(../assets/img/home-bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.home .content{
+	max-width: 50rem;
+}
+.home .content h3{
+	font-size: var(--font-size-xl);
+	color: #ffffff;
+}
+.home .content span{
+	font-size: var(--font-size-large);
+	font-weight: 500;
+	color: var(--blue);
+	padding: 1rem 0;
+	line-height: 1.5;
+}
+.home .content p{
+	font-size: 1.5rem;
+	color: #d3d3d3;
+	padding: 1rem 0;
+	line-height: 1.5;
+}
+
+
+
+
+
+@media (max-width:991px){
+	html{
+		font-size: 55%;
+	}
+	header{
+		padding: 2rem;
+	}
+	.home .content{
+		max-width: 30rem;
+	}
+	header .navbar a{
+		color: #333;
+	}
+	header .navbar{
+		text-align: center;
+	}
+}
+
+@media (max-width:768px){
+	header .fa-bars{
+		display: block;
+	}
+	header .navbar{
+		position: absolute;
+		top: 100%; left: 0; right: 0;
+		background: #eee;
+		border-top: .1rem solid rgb(0, 0, 0, .1);
+	}
+
+	header .navbar a{
+		margin: 1.5rem;
+		padding: 1.5rem;
+		background:#fff;
+		border: .1rem solid rgb(0, 0, 0, .1);
+		display: block;
+	}
+	.home .content{
+		max-width: 20rem;
+	}
+}
+
+@media (max-width:450px){
+	html{
+		font-size: 50%;
+	}
+	.home .content{
+		max-width: 8rem;
+	}
+}
