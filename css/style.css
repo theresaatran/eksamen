@@ -17,19 +17,7 @@ section{
 	padding: 2rem 9%;
 }
 
-.heading{
-	text-align: center;
-	font-size: 4rem;
-	color: #333;
-	padding: 1rem;
-	margin: 2rem 0;
-	background: rgba(123, 233, 255, 0.127);
-}
-
-.heading span{
-	color: var(--blue);
-}
-
+/* --------------------- BUTTONS --------------------- */
 .button{
 	display: inline-block;
 	margin-top: 1rem;
@@ -43,6 +31,7 @@ section{
 	background-color: var(--blue);
 }
 
+/* --------------------- HEADER --------------------- */
 
 header{
 	top: 0; left: 0; right: 0;
@@ -96,8 +85,7 @@ header.scrolled {
 	transition: background-color 0.3s; 
   }
   
-
-
+/* --------------------- HOME SECTION --------------------- */
 .home{
 	display: flex;
 	align-items: center;
@@ -127,11 +115,25 @@ header.scrolled {
 	line-height: 1.5;
 }
 
+/* --------------------- ABOUT US --------------------- */
+
+.heading{
+	text-align: center;
+	font-size: 4rem;
+	color: #333;
+	padding: 1rem;
+	margin: 2rem 0;
+	background: rgba(123, 233, 255, 0.127);
+}
+
+.heading span{
+	color: var(--blue);
+}
+
 .about .row{
 	display: flex;
 	align-items: center;
-	gap: 2rem;
-	flex-wrap: wrap;
+	gap: 4rem;
 	padding: 2rem 0;
 	padding-bottom: 3rem;
 }
@@ -143,20 +145,20 @@ header.scrolled {
 
 .about .row .video-container video{
 	width: 100%;
-	border: 1.5rem solid #fff;
+	border: 1rem solid #fff;
 	border-radius: .5rem;
 	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-	height: 100%;
+	height: auto;
 	object-fit: cover;
 }
 
 .about .row .video-container h3{
 	position: absolute;
 	top: 50%; transform: translateY(-50%);
-	font-size: 3rem;
+	font-size: 2rem;
 	background: #fff;
 	width: 100%;
-	padding: 1rem 2rem;
+	padding: 1rem;
 	text-align: center;
 	mix-blend-mode: screen ;
 }
@@ -166,7 +168,7 @@ header.scrolled {
 }
 
 .about .row .content h3{
-	font-size: 3rem;
+	font-size: 2rem;
 	color: #333; 
 }
 .about .row .content p{
@@ -178,7 +180,39 @@ header.scrolled {
 }
 
 
+.icons-container{
+	background: #eee;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
 
+.icons-container .icons{
+	background-color: #fff;
+	border: .1rem solid rgb(0, 0, 0, .1);
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	flex: 1 1 25rem;
+ }
+
+ .icons-container .icons img{
+	height: 3rem;
+	margin-right: 1rem;
+ }
+ .icons-container .icons h3{
+	color: #333;
+	padding-bottom: .5rem;
+	font-size: 1rem;
+ }
+ .icons-container .icons span{
+	color: #999;
+	font-size: 1rem;
+ }
+
+/* --------------------- MEDIA, RESPONSIVE --------------------- */
 
 @media (max-width:991px){
 	html{
@@ -188,13 +222,10 @@ header.scrolled {
 		padding: 2rem;
 	}
 	.home .content{
-		max-width: 30rem;
+		max-width: 60rem;
 	}
-	header .navbar a{
-		color: #333;
-	}
-	header .navbar{
-		text-align: center;
+	.about .row{
+		flex-wrap: wrap;
 	}
 }
 
@@ -207,18 +238,26 @@ header.scrolled {
 		top: 100%; left: 0; right: 0;
 		background: #eee;
 		border-top: .1rem solid rgb(0, 0, 0, .1);
+		text-align: center;
 	}
 
 	header .navbar a{
 		margin: 1.5rem;
 		padding: 1.5rem;
+		color: #333;
 		background:#fff;
 		border: .1rem solid rgb(0, 0, 0, .1);
 		display: block;
 	}
 	.home .content{
-		max-width: 20rem;
+		max-width: 60rem;
 	}
+	.icons-container .icons h3{ 
+		font-size: 1.3rem;
+	 }
+	 .icons-container .icons span{
+		font-size: 1rem;
+	 }
 }
 
 @media (max-width:450px){
